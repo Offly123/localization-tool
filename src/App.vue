@@ -1,16 +1,19 @@
 <template>
-  <div>
-    <h1>Localization-tool</h1>
-  </div>
+  <RouterView />
+  <button @click="changeLanguage">RU | EN</button>
 </template>
 
 <script setup lang="ts">
+import { RouterView } from 'vue-router';
+import { languageStore, PossibleLanguages } from './stores/lang'
+const store = languageStore();
+
+// Настройка языка
+function changeLanguage() {
+  store.language = store.language === PossibleLanguages.EN ? PossibleLanguages.RU : PossibleLanguages.EN;
+}
 </script>
 
-<style scoped>
-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+<style>
+
 </style>

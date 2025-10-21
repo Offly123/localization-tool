@@ -6,6 +6,12 @@
     },
     {
       "path": "./tsconfig.app.json"
-    }
-  ]
+    } 
+  ],
+  "compilerOptions": {
+    "allowArbitraryExtensions": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
 }
