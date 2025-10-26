@@ -25,6 +25,10 @@ html, body {
 }
 
 body {
+    --font-default-size: 30px
+}
+
+body {
     --bg-light: hsl(0, 0%, 90%);
     --bg-medium: hsl(0, 0%, 80%);
     --bg-dark: hsl(0, 0%, 70%);

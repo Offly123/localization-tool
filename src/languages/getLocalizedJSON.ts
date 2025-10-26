@@ -1,20 +1,23 @@
-import { PossibleLanguages } from '@/stores/lang'
+import { AvailableLanguages, type AvailableLanguagesType } from '@/languages/availableLanguages'
 
-export default async function getLocalizedJSON(language: PossibleLanguages): Promise<Record<string, string>> {
-    let data: Record<string, string>
+export type localizedJSONType = {
+    [key: string]: string | localizedJSONType
+}
 
-    // i'm sorry for that
-    switch (language) {
-        case PossibleLanguages.RU:
-            data = await import('./HomeView/lang/ru.json') as any as Record<string, string>
-            break
-        case PossibleLanguages.EN:
-            data = await import('./HomeView/lang/en.json') as any as Record<string, string>
-            break
-        default:
-            data = await import('./HomeView/lang/en.json') as any as Record<string, string>
-            break
+export default async function getLocalizedJSON(componentName: string, languageCode: string): Promise<localizedJSONType> {   
+    
+    const safeLanguageCode = Object.values(AvailableLanguages)
+        .includes(languageCode as AvailableLanguagesType)
+        ? (languageCode as AvailableLanguagesType)
+        : AvailableLanguages.en
+
+    try {
+        const { default: data } = await import(`@/languages/${componentName}/${safeLanguageCode}.json`)
+        return data
+    } catch {
+        console.error('localized JSON missing');
+        alert('This page is not translated to that language yet')
+        const { default: data } = await import(`@/languages/${componentName}/en.json`)
+        return data
     }
-
-    return data
 }

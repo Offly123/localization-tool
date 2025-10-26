@@ -9,9 +9,6 @@
     } 
   ],
   "compilerOptions": {
-    "allowArbitraryExtensions": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "resolveJsonModule": true
   }
 }

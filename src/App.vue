@@ -1,17 +1,23 @@
 <template>
-  <RouterView />
-  <button @click="changeLanguage">RU | EN</button>
+    <RouterView />
+    <button @click="changeLanguage">RU | EN</button>
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
-import { languageStore, PossibleLanguages } from './stores/lang'
-const store = languageStore();
+import { RouterView } from 'vue-router'
 
-// Настройка языка
+import { useLanguageStore } from '@/stores/languageStore'
+import { AvailableLanguages } from '@/languages/availableLanguages'
+
+const languageStore = useLanguageStore()
+
 function changeLanguage() {
-  store.language = store.language === PossibleLanguages.EN ? PossibleLanguages.RU : PossibleLanguages.EN;
+    languageStore.languageCode = 
+        languageStore.languageCode === AvailableLanguages.en 
+        ? AvailableLanguages.ru 
+        : AvailableLanguages.en
 }
+
 </script>
 
 <style>
