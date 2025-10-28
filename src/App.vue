@@ -13,9 +13,9 @@ const languageStore = useLanguageStore()
 
 function changeLanguage() {
     languageStore.languageCode = 
-        languageStore.languageCode === AvailableLanguages.en 
-        ? AvailableLanguages.ru 
-        : AvailableLanguages.en
+    languageStore.languageCode === AvailableLanguages.en 
+    ? AvailableLanguages.ru 
+    : AvailableLanguages.en
 }
 
 </script>

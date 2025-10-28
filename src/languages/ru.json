@@ -1,0 +1,18 @@
+{
+    "HomeView": {
+        "div": {
+            "button": "О нас"
+        }
+    },
+    "AboutView": {
+        "h1": "О нас:",
+        "link": "На главную"   
+    },
+    "HeaderLayout": {
+        "h1": "Localization-tool"
+    },
+    "NotFound": {
+        "h1": "404 | Страница не найдена",
+        "link": "На главную"
+    }
+}

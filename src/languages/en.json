@@ -1,0 +1,18 @@
+{
+    "HomeView": {
+        "div": {
+            "button": "About us"
+        }
+    },
+    "AboutView": {
+        "h1": "About us",
+        "link": "To home"   
+    },
+    "HeaderLayout": {
+        "h1": "Localization-tool"
+    },
+    "NotFound": {
+        "h1": "404 | Not Found",
+        "link": "Home"
+    }
+}

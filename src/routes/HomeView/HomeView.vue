@@ -1,10 +1,10 @@
 <template>
-    <div v-if="!localizedText">
+    <div v-if="!text">
         Loading text...
     </div>
     <div v-else>
-        <h1>{{ localizedText.h1 }}</h1><br />
-        <RouterLink to="/about">{{ localizedText.div.button }}</RouterLink><br />
+        <HeaderLayout />
+        <RouterLink to="/about">{{ text.div.button }}</RouterLink><br />
     </div>
 </template>
 
@@ -12,12 +12,12 @@
 import { RouterLink } from 'vue-router'
 import { storeToRefs } from 'pinia'
 
+import HeaderLayout from '@/components/layout/HeaderLayout.vue'
 import { useLanguageStore } from '@/stores/languageStore'
 
 const languageStore = useLanguageStore()
-languageStore.init('HomeView')
 
-const { HomeView: localizedText } = storeToRefs(languageStore)
+const { HomeView: text } = storeToRefs(languageStore)
 </script>
 
 <style scoped>

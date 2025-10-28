@@ -3,22 +3,19 @@
         Loading text...
     </div>
     <div v-else>
-        <HeaderLayout />
-        <RouterLink to="/">{{ text.link }}</RouterLink><br />
+        <h1>{{ text.h1 }}</h1>
     </div>
 </template>
 
 <script setup lang="js">
-import { RouterLink } from 'vue-router';
 import { storeToRefs } from 'pinia';
 
 import { useLanguageStore } from '@/stores/languageStore';
-import HeaderLayout from '@/components/layout/HeaderLayout.vue';
 
 const languageStore = useLanguageStore()
 
-const { AboutView: text } = storeToRefs(languageStore)
+const { HeaderLayout: text } = storeToRefs(languageStore)
 </script>
 
-<style scoped>
+<style>
 </style>
