@@ -1,16 +1,14 @@
 # Localization-tool
 
-Tool for localizing videogames (ChatGPT wrapper).
+Tool for localizing videogames (LLM wrapper).
 
-Dependencies:
-- 
+## Dependencies:
+
 - Vue 3.5.22
 - Vue-router 4.6.3
 - Pinia 3.0.3
 
-
-Structure
-- 
+## Structure
 ```bash
 .
 ├── public
@@ -30,6 +28,8 @@ Structure
 │   │   └── router.ts
 │   └── stores
 │       └── exampleStore.ts
-├── base.css
-└── index.html
+├── index.html
+└── base.css
 ```
+
+###### ples help
