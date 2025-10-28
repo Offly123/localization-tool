@@ -15,7 +15,8 @@ export default async function getLocalizedJSON(componentName: string, languageCo
         const { default: data } = await import(`@/languages/${componentName}/${safeLanguageCode}.json`)
         return data
     } catch {
-        console.error('localized JSON missing');
+        // console.error('localized JSON missing');
+        // console.error(`@/languages/${componentName}/${safeLanguageCode}.json`)
         alert('This page is not translated to that language yet')
         const { default: data } = await import(`@/languages/${componentName}/en.json`)
         return data
