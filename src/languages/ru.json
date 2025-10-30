@@ -1,18 +1,36 @@
 {
     "HomeView": {
         "div": {
-            "button": "О нас"
+            "linkAbout": "О нас",
+            "linkPersonalization": "Персонализация"
         }
     },
+
+
     "AboutView": {
         "h1": "О нас:",
         "link": "На главную"   
     },
+
+
     "HeaderLayout": {
         "h1": "Localization-tool"
     },
+
+    
     "NotFound": {
         "h1": "404 | Страница не найдена",
         "link": "На главную"
+    },
+
+    
+    "PersonalizationView": {
+        "h2": "Персонализация",
+        "linkHome": "На главную",
+        "buttonTheme1": "Светло-голубая",
+        "buttonTheme2": "Тёмно-голубая",
+        "buttonTheme3": "Светло-зелёная",
+        "buttonTheme4": "Тёмно-зелёная",
+        "buttonFontSize": "Шрифт"
     }
 }

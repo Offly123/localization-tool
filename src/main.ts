@@ -5,7 +5,9 @@ import router from '@/routes/router'
 
 const app = createApp(App)
 
-app.use(createPinia())
-    .use(router)
+const pinia = createPinia()
+
+app.use(pinia)
+   .use(router)
 
 app.mount('#app')

@@ -1,3 +1,28 @@
+@import url('./themes.css');
+/* 
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 992px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
+}
+
+@media screen and (min-width: 1400px) {
+    
+}
+
+*/
+
 body,
 html,
 a,
@@ -8,6 +33,8 @@ textarea,
 p,
 h1,
 h2,
+h3,
+h4,
 ul,
 li,
 button {
@@ -25,35 +52,46 @@ html, body {
 }
 
 body {
-    --font-default-size: 30px
+    --font-size-default: 10px;
+    --font-size-multiplier: 1;
+    --font-size-visible: calc(var(--font-size-default) * var(--font-size-multiplier));
+
+    @media screen and (min-width: 576px) {
+        --font-size-default: 15px;
+    }
+
+    @media screen and (min-width: 768px) {
+        --font-size-default: 18px;
+    }
+
+    /* TODO: delete */
+    @media screen and (min-width: 992px) {
+        
+    }
+
+    @media screen and (min-width: 1200px) {
+        
+    }
+
+    @media screen and (min-width: 1400px) {
+        
+    }
 }
 
 body {
-    --bg-light: hsl(0, 0%, 90%);
-    --bg-medium: hsl(0, 0%, 80%);
-    --bg-dark: hsl(0, 0%, 70%);
-    --font-light: hsl(0, 0%, 30%);
-    --font-medium: hsl(0, 0%, 20%);
-    --font-dark: hsl(0, 0%, 10%);
-    background-color: var(--bg-light);
-    color: var(--font-dark)
+    background-color: var(--bg-medium);
+    color: var(--font-medium)
 }
 
-.dark {
-    --bg-light: hsl(0, 0%, 30%);
-    --bg-medium: hsl(0, 0%, 20%);
-    --bg-dark: hsl(0, 0%, 10%);
-    --font-light: hsl(0, 0%, 90%);
-    --font-medium: hsl(0, 0%, 80%);
-    --font-dark: hsl(0, 0%, 70%);
-    background-color: var(--bg-dark);
-    color: var(--font-light)
+* {
+    transition: all 0.1s;
 }
 
 a,
 p,
 button {
-    font-size: var(--font-default-size);
+    font-size: var(--font-size-visible);
+    font-weight: 600;
 }
 
 a,
@@ -63,18 +101,26 @@ button {
     transition: all 0.1s;
 }
 
-h1, h2 {
-    font-weight: 700;
+button {
+    user-select: none;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
 }
 
 h1 {
-    font-size: min(7vw, 3rem);
+    font-size: calc(var(--font-size-visible) * 3);
 }
 
 h2 {
-    font-size: min(5vw, 30px);
+    font-size: calc(var(--font-size-visible) * 2.5);
 }
 
 h3 {
-    font-size: min(3vw, 20px);
+    font-size: calc(var(--font-size-visible) * 2);
+}
+
+h4 {
+    font-size: calc(var(--font-size-visible) * 1.5);
 }

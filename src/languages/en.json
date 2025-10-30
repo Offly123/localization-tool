@@ -1,18 +1,36 @@
 {
     "HomeView": {
         "div": {
-            "button": "About us"
+            "linkAbout": "About us",
+            "linkPersonalization": "Personalization"
         }
     },
+
+
     "AboutView": {
         "h1": "About us",
         "link": "To home"   
     },
+
+
     "HeaderLayout": {
         "h1": "Localization-tool"
     },
+
+
     "NotFound": {
         "h1": "404 | Not Found",
         "link": "Home"
+    },
+
+
+    "PersonalizationView": {
+        "h2": "Personalization",
+        "linkHome": "Home",
+        "buttonTheme1": "Light-blue",
+        "buttonTheme2": "Dark-blue",
+        "buttonTheme3": "Light-green",
+        "buttonTheme4": "Dark-green",
+        "buttonFontSize": "Font"
     }
 }

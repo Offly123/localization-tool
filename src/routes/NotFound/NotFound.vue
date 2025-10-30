@@ -1,11 +1,15 @@
 <template>
-    <div v-if="!text">
+    <main v-if="!text">
         Loading text...
-    </div>
-    <div v-else>
-        <HeaderLayout />
-        <RouterLink to="/">{{ text.link }}</RouterLink>
-    </div>
+    </main>
+    <main v-else>
+        <div>
+            <h1>{{ text.h1 }}</h1>
+        </div>
+        <div>
+            <RouterLink to="/">{{ text.link }}</RouterLink>
+        </div>
+    </main>
 </template>
 
 <script setup lang="js">
@@ -13,14 +17,20 @@
 import { RouterLink } from 'vue-router'
 import { storeToRefs } from 'pinia'
 
-import HeaderLayout from '@/components/layout/HeaderLayout.vue'
 import { useLanguageStore } from '@/stores/languageStore'
 
 const languageStore = useLanguageStore()
-languageStore.init('NotFound')
 
 const { NotFound: text } = storeToRefs(languageStore)
 </script>
 
 <style scoped>
+main {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
 </style>

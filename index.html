@@ -8,6 +8,13 @@
     <title>Localization-tool</title>
   </head>
   <body>
+    <script>
+      const colorTheme = localStorage.getItem('theme')
+      document.body.className = colorTheme ? colorTheme : 'default'
+
+      const fontSize = localStorage.getItem('fontSize')
+      document.body.style.setProperty('--font-size-multiplier', fontSize ? fontSize : 1)
+    </script>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

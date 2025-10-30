@@ -4,7 +4,8 @@
     </div>
     <div v-else>
         <HeaderLayout />
-        <RouterLink to="/about">{{ text.div.button }}</RouterLink><br />
+        <RouterLink to="/about">{{ text.div.linkAbout }}</RouterLink><br />
+        <RouterLink to="/personalization">{{ text.div.linkPersonalization }}</RouterLink><br />
     </div>
 </template>
 
