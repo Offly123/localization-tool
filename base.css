@@ -1,25 +1,25 @@
 @import url('./themes.css');
 /* 
 
-@media screen and (min-width: 576px) {
+    @media screen and (min-width: 576px) {
 
-}
+    }
 
-@media screen and (min-width: 768px) {
-    
-}
+    @media screen and (min-width: 768px) {
+        
+    }
 
-@media screen and (min-width: 992px) {
-    
-}
+    @media screen and (min-width: 992px) {
+        
+    }
 
-@media screen and (min-width: 1200px) {
-    
-}
+    @media screen and (min-width: 1200px) {
+        
+    }
 
-@media screen and (min-width: 1400px) {
-    
-}
+    @media screen and (min-width: 1400px) {
+        
+    }
 
 */
 
@@ -52,6 +52,7 @@ html, body {
 }
 
 body {
+
     --font-size-default: 10px;
     --font-size-multiplier: 1;
     --font-size-visible: calc(var(--font-size-default) * var(--font-size-multiplier));
@@ -84,7 +85,7 @@ body {
 }
 
 * {
-    transition: all 0.1s;
+    transition: all 0.1s !important;
 }
 
 a,
@@ -98,7 +99,6 @@ a,
 button {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    transition: all 0.1s;
 }
 
 button {
@@ -123,4 +123,18 @@ h3 {
 
 h4 {
     font-size: calc(var(--font-size-visible) * 1.5);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    padding: 10px;
+
+    @media screen and (min-width: 992px) {
+        padding: 20px;
+    }
 }

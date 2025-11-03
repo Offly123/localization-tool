@@ -1,11 +1,12 @@
 <template>
-    <div v-if="!text">
+    <HeaderLayout />
+    <main v-if="!text">
         Loading text...
-    </div>
-    <div v-else>
-        <HeaderLayout />
-        <RouterLink to="/">{{ text.link }}</RouterLink><br />
-    </div>
+    </main>
+    <main v-else>
+        <p>{{ text.p }}</p>
+    </main>
+    <FooterLayout />
 </template>
 
 <script setup lang="js">
@@ -14,6 +15,7 @@ import { storeToRefs } from 'pinia';
 
 import { useLanguageStore } from '@/stores/languageStore';
 import HeaderLayout from '@/components/layout/HeaderLayout.vue';
+import FooterLayout from '@/components/layout/FooterLayout.vue';
 
 const languageStore = useLanguageStore()
 
@@ -21,4 +23,9 @@ const { AboutView: text } = storeToRefs(languageStore)
 </script>
 
 <style scoped>
+main {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
 </style>

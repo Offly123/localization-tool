@@ -1,20 +1,22 @@
 {
     "HomeView": {
-        "div": {
-            "linkAbout": "About us",
-            "linkPersonalization": "Personalization"
-        }
+        "a": "Start ->"
     },
 
 
     "AboutView": {
-        "h1": "About us",
-        "link": "To home"   
+        "p": "Here should be some text about us"
     },
 
 
     "HeaderLayout": {
-        "h1": "Localization-tool"
+        "a": "Localization-tool"
+    },
+
+
+    "NavbarLayout": {
+        "a1": "About us",
+        "a2": "Personalization"
     },
 
 
@@ -32,5 +34,10 @@
         "buttonTheme3": "Light-green",
         "buttonTheme4": "Dark-green",
         "buttonFontSize": "Font"
+    },
+
+
+    "FooterLayout": {
+        "a": "© 2025 Offly."
     }
 }

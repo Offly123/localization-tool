@@ -1,20 +1,22 @@
 {
     "HomeView": {
-        "div": {
-            "linkAbout": "О нас",
-            "linkPersonalization": "Персонализация"
-        }
+        "a": "Начать ->"
     },
 
 
     "AboutView": {
-        "h1": "О нас:",
-        "link": "На главную"   
+        "p": "Здесь должен быть текст о нас"
     },
 
 
     "HeaderLayout": {
-        "h1": "Localization-tool"
+        "a": "Localization-tool"
+    },
+
+
+    "NavbarLayout": {
+        "a1": "О нас",
+        "a2": "Персонализация"
     },
 
     
@@ -32,5 +34,10 @@
         "buttonTheme3": "Светло-зелёная",
         "buttonTheme4": "Тёмно-зелёная",
         "buttonFontSize": "Шрифт"
+    },
+
+
+    "FooterLayout": {
+        "a": "© 2025 Offly."
     }
 }

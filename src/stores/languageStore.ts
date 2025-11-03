@@ -3,6 +3,8 @@ import { defineStore } from "pinia"
 
 import getLocalizedJSON, { type localizedJSONType } from '@/languages/getLocalizedJSON'
 
+
+
 export const useLanguageStore = defineStore('languageStore', () => {
     const defaultLanguage = getDefaultLanguage()
     const languageCode = ref<string>(defaultLanguage)
@@ -12,7 +14,9 @@ export const useLanguageStore = defineStore('languageStore', () => {
         NotFound:  null,
         AboutView: null,
         HeaderLayout: null,
-        PersonalizationView: null
+        NavbarLayout: null,
+        PersonalizationView: null,
+        FooterLayout: null
     })
 
     onMounted(async () => {
