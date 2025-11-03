@@ -3,7 +3,7 @@
         Loading text...
     </header>
     <header v-else>
-        <RouterLink to="/">{{ text.a }}</RouterLink>
+        <RouterLink class="amogus" to="/">{{ text.a }}</RouterLink>
         <NavbarLayout />
         <button @click="changeLanguage">RU | EN</button>
     </header>
@@ -39,6 +39,7 @@ header {
     --padding: 10px;
     padding-top: var(--padding);
     padding-left: var(--padding);
+    overflow: hidden;
     padding-right: var(--padding);
     width: calc(100vw - 2 * var(--padding));
     background-color: var(--bg-light);
@@ -55,6 +56,9 @@ header > a {
 }
 
 header > button {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
     position: absolute;
     top: 10px;
     right: 10px;

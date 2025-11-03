@@ -51,11 +51,12 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 20px;
+    padding: 10px;
 }
 
 main > h2 {
     text-align: center;
+    overflow: hidden;
 }
 main > .button-list {
     display: flex;

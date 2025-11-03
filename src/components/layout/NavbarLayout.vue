@@ -3,8 +3,9 @@
         Loading text...
     </nav>
     <nav v-else>
-        <RouterLink to="/about" class="about active">{{ text.a1 }}</RouterLink>
-        <RouterLink to="/personalization" class="about active">{{ text.a2 }}</RouterLink>
+        <RouterLink to="/about">{{ text.a1 }}</RouterLink>
+        <RouterLink to="/personalization">{{ text.a2 }}</RouterLink>
+        <RouterLink to="/app">{{ text.a3 }}</RouterLink>
     </nav>
 </template>
 
@@ -35,8 +36,9 @@ nav {
     width: 100vw;
     height: 20px;
 
+    height: calc(var(--font-size-visible) * 2);
     @media screen and (min-width: 992px) {
-        height: 50px;   
+        min-height: 40px;
     }
 }
 
@@ -44,13 +46,25 @@ nav > a {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-grow: 1;
-    flex-shrink: 0; */
-    width: 50%;
+    position: relative;
+    flex: 1 0 0;
     height: 100%;
 }
 
+nav > a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    right: 0;
+    top: 50%;
+    background-color: var(--font-dark);
+    transform: translate(50%, -50%);
+}
+
 nav > a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    @media (pointer: fine) {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 </style>

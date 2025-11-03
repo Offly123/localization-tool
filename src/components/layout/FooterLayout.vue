@@ -27,7 +27,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 75px;
+    height: max(calc(var(--font-size-visible) * 3), 75px);
     background-color: var(--bg-dark);
 }
 
