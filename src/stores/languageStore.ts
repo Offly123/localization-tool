@@ -1,9 +1,21 @@
-import { reactive, ref, watch, toRefs, onMounted } from "vue"
+import { reactive, ref, watch, toRefs, onMounted, type Ref } from "vue"
 import { defineStore } from "pinia"
 
 import getLocalizedJSON, { type localizedJSONType } from '@/languages/getLocalizedJSON'
 
 
+
+interface LanguageStoreReturn {
+    languageCode: Ref<string>,
+    HomeView: Ref<localizedJSONType>,
+    NotFound: Ref<localizedJSONType>,
+    AboutView: Ref<localizedJSONType>,
+    HeaderLayout: Ref<localizedJSONType>,
+    NavbarLayout: Ref<localizedJSONType>,
+    PersonalizationView: Ref<localizedJSONType>,
+    FooterLayout: Ref<localizedJSONType>,
+    AppView: Ref<localizedJSONType>,
+}
 
 export const useLanguageStore = defineStore('languageStore', () => {
     const defaultLanguage = getDefaultLanguage()
@@ -16,10 +28,12 @@ export const useLanguageStore = defineStore('languageStore', () => {
         HeaderLayout: null,
         NavbarLayout: null,
         PersonalizationView: null,
-        FooterLayout: null
+        FooterLayout: null,
+        AppView: null
     })
 
     onMounted(async () => {
+        console.log('onmount')
         Object.assign(localizedText, await getNewLanguageJSON(languageCode.value))
     })
 
@@ -30,7 +44,8 @@ export const useLanguageStore = defineStore('languageStore', () => {
     (() => {})()
 
 
-    return { languageCode, ...toRefs(localizedText) }
+    // return { languageCode, ...toRefs(localizedText) }
+    return { languageCode, ...toRefs(localizedText) } as LanguageStoreReturn
 })
 
 function getDefaultLanguage(): string {

@@ -38,6 +38,12 @@
     },
 
 
+    "AppView": {
+        "errorUnsupportedFiletype": "Неподдиреживаемый тип  файла",
+        "errorFileRead": "Ошибка при чтении файла. Пожалуйста, попробуйте ещё раз"
+    },
+
+
     "FooterLayout": {
         "a": "© 2025 Offly."
     }

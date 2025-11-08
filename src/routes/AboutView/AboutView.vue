@@ -9,13 +9,12 @@
     <FooterLayout />
 </template>
 
-<script setup lang="js">
-import { RouterLink } from 'vue-router';
+<script setup lang="ts">
 import { storeToRefs } from 'pinia';
 
-import { useLanguageStore } from '@/stores/languageStore';
-import HeaderLayout from '@/components/layout/HeaderLayout.vue';
-import FooterLayout from '@/components/layout/FooterLayout.vue';
+import { useLanguageStore } from '@/stores/languageStore'
+import HeaderLayout from '@/components/layout/HeaderLayout.vue'
+import FooterLayout from '@/components/layout/FooterLayout.vue'
 
 const languageStore = useLanguageStore()
 

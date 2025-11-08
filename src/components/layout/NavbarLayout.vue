@@ -5,11 +5,10 @@
     <nav v-else>
         <RouterLink to="/about">{{ text.a1 }}</RouterLink>
         <RouterLink to="/personalization">{{ text.a2 }}</RouterLink>
-        <RouterLink to="/app">{{ text.a3 }}</RouterLink>
     </nav>
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import { storeToRefs } from 'pinia'
 
@@ -18,12 +17,6 @@ import { useLanguageStore } from '@/stores/languageStore'
 const languageStore = useLanguageStore()
 
 const { NavbarLayout: text } = storeToRefs(languageStore)
-
-if (/about$/.test(window.location)) {
-    const navigation = document.querySelector('nav')
-
-    console.log(navigation)
-}
 </script>
 
 <style scoped>
@@ -33,6 +26,8 @@ nav {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    background-color: var(--bg-light);
+    background-color: transparent;
     width: 100vw;
     height: 20px;
 

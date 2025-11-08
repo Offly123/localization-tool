@@ -19,7 +19,7 @@
     </button>
 </template>
 
-<script lang="js">
+<script lang="ts">
 
 </script>
 

@@ -9,7 +9,7 @@
     <FooterLayout />
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 import { storeToRefs } from 'pinia'
 
 import HeaderLayout from '@/components/layout/HeaderLayout.vue'

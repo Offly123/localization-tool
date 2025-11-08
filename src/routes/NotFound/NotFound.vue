@@ -12,7 +12,7 @@
     </main>
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 
 import { RouterLink } from 'vue-router'
 import { storeToRefs } from 'pinia'

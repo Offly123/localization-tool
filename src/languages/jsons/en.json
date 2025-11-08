@@ -38,6 +38,12 @@
     },
 
 
+    "AppView": {
+        "errorUnsupportedFiletype": "Unsupported file type",
+        "errorFileRead": "Error reading file. Please try again"
+    },
+
+
     "FooterLayout": {
         "a": "© 2025 Offly."
     }

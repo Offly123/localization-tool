@@ -8,7 +8,7 @@ export default async function getLocalizedJSON(languageCode: string): Promise<lo
     
     const safeLanguageCode = Object.values(AvailableLanguages)
         .includes(languageCode as AvailableLanguagesType)
-        ? (languageCode as AvailableLanguagesType)
+        ? (languageCode)
         : AvailableLanguages.en
 
     try {

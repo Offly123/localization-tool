@@ -9,7 +9,7 @@
     </footer>
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 import { useLanguageStore } from '@/stores/languageStore';
 import { storeToRefs } from 'pinia';
 

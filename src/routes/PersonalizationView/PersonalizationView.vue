@@ -21,7 +21,7 @@
             <button
                 v-for="fontSize in availavleFontSizes"
                 :key="fontSize"
-                @click="changeFontSize(fontSize)"
+                @click="changeFontSize(String(fontSize))"
             >
             {{ `${text.buttonFontSize} ${fontSize}x` }}
         </button>
@@ -30,7 +30,7 @@
     <FooterLayout />
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 import { storeToRefs } from 'pinia'
 
 import { useLanguageStore } from '@/stores/languageStore'
