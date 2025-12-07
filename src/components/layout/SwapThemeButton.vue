@@ -1,5 +1,5 @@
 <template>
-    <button @click="switchTheme">
+    <!-- <button @click="switchTheme">
         <svg viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g>
                 <circle r="50" cx="100" cy="100" />
@@ -16,7 +16,8 @@
                 <path d="M 70 25 A 75 75 0 0 1 70 175 A 75 85 0 0 0 70 25"/>
             </g>
         </svg>
-    </button>
+    </button> -->
+    123
 </template>
 
 <script lang="ts">

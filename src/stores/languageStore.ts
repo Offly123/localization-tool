@@ -7,14 +7,14 @@ import getLocalizedJSON, { type localizedJSONType } from '@/languages/getLocaliz
 
 interface LanguageStoreReturn {
     languageCode: Ref<string>,
-    HomeView: Ref<localizedJSONType>,
-    NotFound: Ref<localizedJSONType>,
-    AboutView: Ref<localizedJSONType>,
     HeaderLayout: Ref<localizedJSONType>,
     NavbarLayout: Ref<localizedJSONType>,
+    HomeView: Ref<localizedJSONType>,
+    AboutView: Ref<localizedJSONType>,
     PersonalizationView: Ref<localizedJSONType>,
-    FooterLayout: Ref<localizedJSONType>,
     AppView: Ref<localizedJSONType>,
+    NotFound: Ref<localizedJSONType>,
+    FooterLayout: Ref<localizedJSONType>,
 }
 
 export const useLanguageStore = defineStore('languageStore', () => {
@@ -33,7 +33,7 @@ export const useLanguageStore = defineStore('languageStore', () => {
     })
 
     onMounted(async () => {
-        console.log('onmount')
+        // console.log('onMounted')
         Object.assign(localizedText, await getNewLanguageJSON(languageCode.value))
     })
 

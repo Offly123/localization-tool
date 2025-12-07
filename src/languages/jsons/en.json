@@ -40,7 +40,9 @@
 
     "AppView": {
         "errorUnsupportedFiletype": "Unsupported file type",
-        "errorFileRead": "Error reading file. Please try again"
+        "errorFileRead": "Error reading file. Please try again",
+        "sourceLanguage": "Source language",
+        "targetLanguage": "Target language"
     },
 
 

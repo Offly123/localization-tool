@@ -7,6 +7,7 @@ Tool for localizing videogames (LLM wrapper).
 - Vue 3.5.22
 - Vue-router 4.6.3
 - Pinia 3.0.3
+- @huggingface/transformers 3.8.0
 
 ## Structure
 ```bash
@@ -15,12 +16,14 @@ Tool for localizing videogames (LLM wrapper).
 ├── src
 │   ├── App.vue
 │   ├── assets - fonts, images
-│   │   └── fonts
+│   │   └── fonts/
 │   ├── components
-│   │   └── layout - layout components (Header, Footer, etc)
+│   │   ├── ui/ - reusable components
+│   │   └── layout/ - layout components (Header, Footer, etc)
 │   ├── languages - JSONs with localized text
 │   │   ├── availableLanguages.ts
-│   │   └── getLocalizedJSON.ts
+│   │   ├── getLocalizedJSON.ts
+│   │   └── jsons/ - localized JSONs
 │   ├── main.ts
 │   ├── routes
 │   │   ├── ExampleView

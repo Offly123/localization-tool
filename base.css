@@ -57,6 +57,7 @@ body {
     --font-size-default: 0.8rem;
     --font-size-multiplier: 1;
     --font-size-visible: calc(var(--font-size-default) * var(--font-size-multiplier));
+    --fzv: var(var(--font-size-visible));
 
     @media screen and (min-width: 576px) {
         --font-size-default: 1.1rem;
@@ -66,7 +67,6 @@ body {
         --font-size-default: 1.3rem;
     }
 
-    /* TODO: delete */
     @media screen and (min-width: 992px) {
         
     }
@@ -76,7 +76,7 @@ body {
     }
 
     @media screen and (min-width: 1400px) {
-        --font-size-default: max(1.5rem, 0.8vw);
+        --font-size-default: max(1.3rem, 0.8vw);
     }
 }
 

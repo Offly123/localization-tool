@@ -5,6 +5,7 @@
     <nav v-else>
         <RouterLink to="/about">{{ text.a1 }}</RouterLink>
         <RouterLink to="/personalization">{{ text.a2 }}</RouterLink>
+        <RouterLink to="/temp">temp</RouterLink>
     </nav>
 </template>
 

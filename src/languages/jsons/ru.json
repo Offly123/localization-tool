@@ -40,7 +40,9 @@
 
     "AppView": {
         "errorUnsupportedFiletype": "Неподдиреживаемый тип  файла",
-        "errorFileRead": "Ошибка при чтении файла. Пожалуйста, попробуйте ещё раз"
+        "errorFileRead": "Ошибка при чтении файла. Пожалуйста, попробуйте ещё раз",
+        "sourceLanguage": "Исходный язык",
+        "targetLanguage": "Целевой язык"
     },
 
 
